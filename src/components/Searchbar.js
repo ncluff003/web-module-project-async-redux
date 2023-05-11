@@ -41,7 +41,7 @@ const StyledSearchbar = styled.label`
 `;
 
 const Searchbar = (props) => {
-  const { updateSearchTerm, getRecipes } = props;
+  const { searchTerm, page, updateSearchTerm, getRecipes } = props;
   const handleChange = (e, button) => {
     e.preventDefault();
     let { name, value } = e.target;
@@ -52,7 +52,7 @@ const Searchbar = (props) => {
       case "search":
         return updateSearchTerm(value);
       case "recipes":
-        return getRecipes(props.searchTerm, props.page);
+        return getRecipes(searchTerm, page);
       default:
         return;
     }

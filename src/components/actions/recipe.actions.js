@@ -16,7 +16,6 @@ export const getRecipes = (searchTerm, page) => async (dispatch) => {
       },
       headers: {
         "X-RapidAPI-Key": apikey,
-        // "X-RapidAPI-Key": "63520b57f5msh146e172cb5470f2p127d83jsn8ebfad54b555",
         "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
       },
     };
@@ -24,11 +23,11 @@ export const getRecipes = (searchTerm, page) => async (dispatch) => {
     const response = await axios(options);
     console.log(response);
     recipes = response.data.results;
+    console.log(recipes);
+    return { type: GET_RECIPES, payload: recipes };
   } catch (error) {
     console.error(error);
   }
-  console.log(recipes);
-  return { type: GET_RECIPES, payload: recipes };
 };
 
 export const getRecipesSuccess = (recipes) => {
