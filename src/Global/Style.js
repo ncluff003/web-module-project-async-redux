@@ -1,8 +1,20 @@
+import React from "react";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
 *,
 *::before,
 *:after {
   margin: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   padding: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
   box-sizing: inherit;
   font: inherit;
   vertical-align: baseline;
@@ -28,3 +40,6 @@ body > #root {
   height: 100vh;
   width: 100vw;
 }
+  `;
+
+export default GlobalStyle;

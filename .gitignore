@@ -236,3 +236,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 node_modules
+
+# JS files to ignore
+config.js
+./config.js
